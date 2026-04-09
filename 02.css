@@ -1,0 +1,108 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #fceaca; 
+  background-image: radial-gradient(
+    1500px 1000px at 95% 0%,
+    #fbd9cd 0%,
+    transparent 80%
+  );
+}
+
+h1 {
+  text-align: center;
+  color: #543618;
+  margin: 20px 0 12px;
+}
+.film-roll-wrapper {
+  width: 100%;
+  overflow: hidden; 
+}
+.film-roll-container {
+  display: flex;
+  width: max-content;
+  padding-left: 20px;
+  align-items: center; 
+  background-color: #222;
+  padding: 30px 0 40px 0;
+  box-shadow: inset 0 0 10px #3d1c00;
+  background-image: 
+    repeating-linear-gradient(
+      to right,
+      #fceaca 0, /* 孔洞顏色 */
+      #fceaca 8px,
+      #222 8px,    /* 底片顏色 */
+      #222 25px
+    ),
+    /* 2. 下排孔洞 */
+    repeating-linear-gradient(
+      to right, 
+      #fceaca 0, 
+      #fceaca 8px,
+      #222 8px,
+      #222 25px
+    );
+  
+  background-repeat: repeat-x;
+  background-size: 25px 10px;
+  background-position: 
+    left 0px top 10px,   /* 上排 */
+    left 0px bottom 20px; /* 下排 */
+  animation: scroll-left 60s linear infinite;
+}
+.film-roll-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from {
+    /* 從 0% 開始 */
+    transform: translateX(0);
+  }
+  to {
+    /* 移動到 -50%
+      (因為我們 HTML 複製了一次，總寬度 200%，
+       移動 50% 剛好是移動一整組的寬度)
+    */
+    transform: translateX(-50%);
+  }
+}
+
+
+/* --- 下面的樣式都不用動 --- */
+
+/* 3. 每一張照片的框：(這個不用動) */
+.film-frame {
+  width: 300px;
+  margin-right: 20px;
+  flex-shrink: 0; 
+  border: 0px solid #f0d8a8;
+  background-color: #fff;
+  scroll-snap-align: center; 
+}
+
+.film-frame img {
+  width: 100%;
+  display: block; 
+}
+
+
+.btn {
+    display: block;
+    margin: 40px auto;
+    width: 250px; 
+    text-align: center;
+    border: none;
+    background-color: #f1bc52;
+    padding: 10px 30px;
+    box-shadow: 0 10px 5px -10px #d4dcd1;
+    font-size: 20px;
+    font-family: "微軟正黑體", sans-serif;
+    font-weight: bold;
+    color: #543618;
+}
+
+.btn:hover {
+    background-color: #d4dcd1;
+    cursor: pointer;
+}

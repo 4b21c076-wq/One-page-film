@@ -1,0 +1,68 @@
+body {
+    background-color:  #fdf3d6; 
+    background-image: radial-gradient(
+        1500px 500px at 10px 0%,
+        #ffbe98 0%,
+        transparent 80%
+    );
+    font-family: sans-serif;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    color: #f9b2bc;
+}
+p {
+    text-align: center;
+    color: #88b2b2;
+}
+/* 1. 總容器 */
+.darkroom-container {
+    position: relative; 
+    display: inline-block; 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    cursor: crosshair; 
+}
+
+
+.final-photo {
+    
+    display: block; 
+    max-width: 80vw;  /* 最多 80% 螢幕寬 */
+    max-height: 70vh; /* 最多 70% 螢幕高 */
+}
+
+/* 3. 頂層的「畫布」 */
+#developer-canvas {
+    position: absolute; /* 關鍵！把它「疊」在照片上面 */
+    top: 0;
+    left: 0;
+    width: 100%;  /* (100% of the container) */
+    height: 100%; /* (100% of the container) */
+}
+.btn {
+    display: block;
+    margin: 40px auto;
+    width: 250px; 
+    text-align: center;
+    border: none;
+    background-color:#ffbe98;
+    padding: 10px 30px;
+    box-shadow: 0 10px 5px -10px #d4dcd1;
+    font-size: 20px;
+    font-family: "微軟正黑體", sans-serif;
+    font-weight: bold;
+    color: #305066;
+}
+
+.btn:hover {
+    background-color: #d3edc5; 
+    cursor: pointer;
+}
