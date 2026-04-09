@@ -1,0 +1,82 @@
+body {
+    background-color: #fbf4cd;
+    background-image: radial-gradient(
+        1500px 1000px at 95% 0%,
+         #e5e593 0%,
+        transparent 80%
+    );
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    
+    height: 100vh;
+    font-family: sans-serif;
+    margin: 0; 
+}
+
+h2 {
+    text-align: center; /* 標題置中 */
+    color: #305066;
+    margin: 20px 0 12px;
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center; 
+    
+    flex-grow: 1; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+#my-photo {
+    width: 100%;
+    max-width: 600px;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px #305066;
+    display: block; 
+    margin-top: 20px; 
+    transition: filter 0.5s ease-in-out; 
+}
+
+#my-photo.is-negative {
+    filter: invert(100%);
+}
+
+#toggle-button {
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color:#e5e593;
+    box-shadow: 0 10px 5px -10px #d4dcd1;
+    font-family: "微軟正黑體", sans-serif;
+    font-weight: bold;
+    color: #305066;
+}
+#toggle-button:hover {
+    background-color:#ffd5e5;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    margin: 40px auto;
+    width: 250px; 
+    text-align: center;
+    border: none;
+    background-color:#f490b9; 
+    padding: 10px 30px;
+    box-shadow: 0 10px 5px -10px #d4dcd1;
+    font-size: 20px;
+    font-family: "微軟正黑體", sans-serif;
+    font-weight: bold;
+    color: #305066;
+}
+
+.btn:hover {
+    background-color: #ffd5e5;
+    cursor: pointer;
+}
